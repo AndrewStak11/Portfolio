@@ -1,0 +1,850 @@
+body#main-page {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    position: relative; /* Базовая позиция для псевдоэлемента */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #556983;
+    background-image: url("./../Img/header/333.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white; /* Цвет текста */
+    text-align: center;
+    z-index: 1; /* Текст будет выше */
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Затемнение - черный с прозрачностью */
+    z-index: -1; /* Затемнение под контентом */
+}
+
+
+.header-title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 130%;
+    text-align: center;
+    color: #fbf7f7;
+}
+
+.header-subtitle {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.wrapper {
+    position: absolute; /* Фиксируем позицию относительно родительского контейнера */
+    bottom: 30px; /* Располагаем внизу */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translateX(-50%);
+    display: flex; /* Для удобства работы с несколькими стрелками */
+    justify-content: center; /* Центрируем содержимое */
+    align-items: center; /* Центрируем содержимое */
+    width: 100%; /* На всю ширину родительского блока */
+    z-index: 10; /* Убедитесь, что стрелка находится поверх других элементов */
+}
+.arrow {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: arrowDown 2s infinite;
+}
+
+.arrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.arrow.two {
+    animation-delay: 1s;
+    opacity: 1;
+}
+
+@keyframes arrowDown {
+    0% {
+        bottom: 10px; /* Начальная позиция */
+        opacity: 1;
+    }
+    100% {
+        bottom: 0px; /* Конечная позиция */
+        opacity: 0;
+    }
+}
+
+
+    #portfolio-main {
+        display: flex;
+        background-color: white;
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        justify-content: center; /* Центрирование карточек по вертикали */
+        align-items: center; /* Центрирование карточек по горизонтали */
+        min-height: 100vh;
+        padding: 80px 20px;
+    }
+    
+    .portfolio-header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #000;
+    }
+    
+    .portfolio .container {
+        display: flex;
+        flex-direction: column; /* Карточки расположены вертикально */
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Расстояние между карточками */
+        max-width: 1200px;
+        width: 100%; /* Занимают всю ширину экрана */
+        margin: 0 auto;
+    }
+    
+    .card-main {
+        display: flex;
+        flex-direction: row; /* Горизонтальное расположение элементов */
+        width: 900px; /* Ширина карточки */
+        height: 350px; /* Высота карточки */
+        background-color: rgb(217, 214, 214);
+        border-radius: 8px;
+        box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
+        overflow: hidden; /* Чтобы контент не выходил за границы */
+    }
+    
+    .card-img {
+        width: 50%; /* Изображение занимает половину карточки */
+        height: 100%; /* Полная высота карточки */
+        object-fit: cover; /* Изображение сохраняет пропорции */
+    }
+    
+    .card-content {
+        position: relative; /* Установить относительное позиционирование для родителя */
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
+        text-align: left;
+    }
+    
+    .card-button {
+        position: absolute; /* Абсолютное позиционирование */
+        bottom: 20px; /* Отступ от нижнего края */
+        right: 20px; /* Отступ от правого края */
+        background-color: #008CBA;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .card-button:hover {
+        background-color: #005f7f;
+    }
+    
+    
+/* Footer */
+/* Основной стиль футера */
+#main-footer {
+    background-color: rgb(81, 81, 81);
+    padding: 30px 0;
+    color: white;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Контейнер футера */
+#main-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Разделение частей футера */
+    align-items: center;
+    flex-wrap: wrap; /* Перенос на малых экранах */
+}
+
+/* Части футера */
+.footer-part {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Название и роль */
+.footer-name h3 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.footer-name p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+/* Ряд с иконками */
+.footer-icons-row {
+    display: flex;
+    justify-content: center; /* Центрирование */
+    gap: 15px; /* Отступ между иконками */
+}
+
+.footer-icons-row img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Круглая форма */
+    transition: transform 0.3s ease;
+}
+
+.footer-icons-row img:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+/* Кнопка Email */
+.footer-button {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #008CBA;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: #005f7f;
+}
+
+/* //footer */
+/* about me */
+/* Глобальные стили */
+body#about-page {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex; /* Flexbox для выравнивания */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Макет страницы About Me */
+.container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Контейнер занимает всю ширину экрана */
+    box-sizing: border-box;
+}
+
+/* Секция About */
+.about h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+    max-width: 1200px; /* Ограничение ширины текста для читабельности */
+    margin-left: auto;
+    margin-right: auto;
+    color: #333; /* Улучшение контрастности */
+}
+
+/* Базовая информация */
+.basic-info {
+    margin-top: 40px;
+}
+
+.basic-info h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.basic-info .columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px; /* Ограничение ширины */
+    margin: 0 auto;
+}
+
+.basic-info .basic,
+.basic-info .answers {
+    flex: 1;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.basic-info .basic strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.basic-info .answers p {
+    color: #555;
+    margin: 0;
+}
+
+/* Кнопка "Назад" */
+.button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button-back {
+    display: inline-block;
+    padding: 15px 50px;
+    background: linear-gradient(to right, #008CBA, #005f75);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #005f75;
+    transform: scale(1.05);
+}
+
+.button:active {
+    background-color: #004959;
+    transform: scale(0.95);
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-load {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #008CBA;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #005f75;
+    transform: scale(1.05);
+}
+
+.button:active {
+    background-color: #004959;
+    transform: scale(0.95);
+}
+
+
+/* Footer */
+#about-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    width: 100%; /* На всю ширину экрана */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Ограничиваем ширину содержимого */
+    margin: 0 auto;
+    flex-wrap: wrap; /* Поддержка маленьких экранов */
+}
+
+.footer-part {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-icons-row img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 50%; /* Круглая форма */
+    object-fit: cover; /* Подгоняем изображение */
+    transition: transform 0.3s ease;
+}
+
+.footer-icons-row img:hover {
+    transform: scale(1.1);
+}
+
+.footer-button {
+    display: inline-block;
+    padding: 10px 40px;
+    background: linear-gradient(to right, #008CBA, #005f7f);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: #005f7f;
+}
+
+
+
+/* // About me */ 
+
+/* Skills */
+/* Основные стили для страницы */
+body#skills-page {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Контейнер навыков */
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовок страницы */
+.title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Секция навыков */
+.skills-section {
+    margin-bottom: 40px;
+}
+
+/* Заголовки секций */
+.skills-section h2 {
+    font-size: 28px;
+    color: #005f7f;
+    border-bottom: 2px solid #008CBA;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Список навыков */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Сетка для инструментов */
+.skills-list.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+/* Common button styles */
+.button {
+    display: inline-block;
+    padding: 15px 40px; /* Uniform padding for both buttons */
+    background: linear-gradient(to right, #008CBA, #005f75); /* Gradient for both buttons */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Hover effect */
+.button:hover {
+    background-color: #005f75;
+    transform: scale(1.05); /* Slight enlargement */
+}
+
+/* Active effect */
+.button:active {
+    background-color: #004959;
+    transform: scale(0.95); /* Slight reduction */
+}
+
+/* Specific styles for Back button */
+.button-back {
+    padding: 15px 50px; /* Slightly wider for navigation clarity */
+}
+
+/* Specific styles for Load button */
+.button-load {
+    padding: 15px 30px; /* Slightly narrower for action clarity */
+}
+
+/* Button container styles */
+.button-container {
+    text-align: center;
+    margin-top: 40px; /* Uniform spacing for all button containers */
+}
+
+
+/* Цвета и стили текста */
+.skills-list strong {
+    color: #333;
+    font-weight: 700;
+}
+#skills-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    width: 100%; /* На всю ширину экрана */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Ограничиваем ширину содержимого */
+    margin: 0 auto;
+    flex-wrap: wrap; /* Поддержка маленьких экранов */
+}
+
+.footer-part {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-icons-row img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 50%; /* Круглая форма */
+    transition: transform 0.3s ease;
+}
+
+.footer-icons-row img:hover {
+    transform: scale(1.1);
+}
+
+.footer-button {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: #008CBA;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: #005f7f;
+}
+
+/* // Slills */
+
+/* Projects */
+/* General Styles */
+body#project-page {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.project-container {
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Cards Wrapper */
+.cards-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Image Section */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    cursor: pointer;
+}
+body#project-page {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* Устанавливаем вертикальную структуру */
+    align-items: center;
+    text-align: center;
+    min-height: 100vh; /* Минимальная высота страницы — 100% высоты окна */
+}
+
+.project-container {
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1; /* Контейнер занимает всё доступное пространство */
+}
+
+#project-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    width: 100%; /* Футер занимает всю ширину экрана */
+    margin-top: auto; /* Футер располагается внизу страницы */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Ограничиваем ширину содержимого */
+    margin: 0 auto;
+    flex-wrap: wrap; /* Поддержка маленьких экранов */
+}
+
+.footer-part {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-icons-row img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 50%; /* Круглая форма */
+    transition: transform 0.3s ease;
+}
+
+.footer-icons-row img:hover {
+    transform: scale(1.1);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Центрируем кнопки по горизонтали */
+    gap: 20px; /* Расстояние между кнопками */
+    margin-bottom: 40px; /* Отступ от кнопок до футера */
+}
+
+.footer-button {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: #008CBA;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: #005f7f;
+}
+
+/* // Projects */
+/* Адаптация для экранов шириной до 768px */
+@media (max-width: 750px) {
+    /* Общие настройки */
+    body {
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+
+    /* Стрелки */
+    .arrow {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+    }
+
+    /* Карточки */
+    .card-main {
+        flex-direction: column; /* Располагаем карточку вертикально */
+        width: 100%; /* Занимают всю ширину экрана */
+        height: auto; /* Автоматическая высота */
+    }
+
+    .card-img {
+        width: 100%; /* Изображение растягивается на всю ширину */
+        height: 300px; /* Уменьшаем высоту */
+    }
+
+    .card-content {
+        padding: 15px;
+        text-align: center; /* Центрируем текст */
+    }
+
+    /* Кнопки */
+    .card-button {
+        padding: 10px 20px;
+        font-size: 14px; /* Уменьшаем размер текста */
+    }
+
+    /* Контейнер для кнопок */
+    .button-container {
+        flex-direction: column; /* Располагаем кнопки вертикально */
+        gap: 10px; /* Отступы между кнопками */
+    }
+}
+
+/* Адаптация для экранов шириной до 480px */
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 32px; /* Уменьшаем размер заголовка */
+    }
+
+    .header-subtitle {
+        font-size: 14px; /* Уменьшаем размер подзаголовка */
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
+        bottom: 10px;
+    }
+
+    /* Карточки */
+    .card-main {
+        width: 100%; /* Занимают всю ширину */
+        flex-direction: column;
+    }
+
+    .card-img {
+        height: 150px; /* Уменьшаем высоту изображения */
+    }
+
+    .card-content {
+        padding: 10px;
+    }
+
+    .portfolio-header {
+        font-size: 1.5rem; /* Уменьшаем заголовок портфолио */
+    }
+
+    /* Кнопки */
+    .card-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+

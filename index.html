@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Andrew Stakanchuk - Automated test engineer and Manual QA engineer. Learn more about my skills and projects.">
+        <meta name="keywords" content="QA Engineer, Testing, Automated Testing, Manual Testing, Andrew Stakanchuk">
+        <meta name="author" content="Andrew Stakanchuk">
+        <title>Andrew Stakanchuk</title>
+        <link rel="stylesheet" href="./CSS/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="/icons/monitoring_10806586.png"> <!-- Closing > added -->
+    </head>
+    
+<body id="main-page">
+    <div class="header">
+        <h1 class="header-title">Andrew Stakanchuk</h1>
+        <p class="header-subtitle">Automated test engineer, Manual QA engineer</p>
+        <div class="wrapper">
+            <a href="#portfolio" class="arrow">
+                <img src="./Img/header/down-arrow-56.svg" alt="Scroll down">
+            </a>
+            <a href="#portfolio" class="arrow two">
+                <img src="./Img/header/down-arrow-56.svg" alt="Scroll down">
+            </a>
+        </div>
+        <script>
+            document.querySelector('.arrow').addEventListener('click', function(e) {
+                e.preventDefault(); // Останавливает стандартное поведение ссылки
+                document.querySelector('#portfolio').scrollIntoView({
+                    behavior: 'smooth', // Плавная прокрутка
+                    block: 'start'      // Прокрутить до начала секции
+                });
+            });
+        </script>
+        
+    </div>
+
+    <div id="portfolio-main" class="portfolio">
+        <h2 class="portfolio-header">Portfolio</h2>
+        <div class="container">
+            <!-- Card 1 -->
+            <div class="card-main">
+                <img class="card-img" src="./Img/portfolio/12 copy.jpg" alt="About me">
+                <div class="card-content">
+                    <h3 class="card-title">About me</h3>
+                    <p class="card-description">
+                        I am Andrew Stakanchuk, an Automation test engineer and QA manual engineer...
+                    </p>
+                    <a href="about_me.html" class="card-button">Read about me</a>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card-main">
+                <img class="card-img" src="./Img/portfolio/skill.png" alt="My skills">
+                <div class="card-content">
+                    <h3 class="card-title">My skills</h3>
+                    <p class="card-description">
+                        - Manual testing <br>
+                        - Automated testing
+                    </p>
+                    <a href="my_skills.html" class="card-button">See skills</a>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card-main">
+                <img class="card-img" src="./Img/portfolio/Experience.webp" alt="My projects">
+                <div class="card-content">
+                    <h3 class="card-title">My projects</h3>
+                    <p class="card-description">
+                        Explore my professional projects and learn more about my experience.
+                    </p>
+                    <a href="http://127.0.0.1:5500/my_projects.html" class="card-button">See projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-part">
+                <div class="footer-name">
+                    <h3>ⓒ Andrew Stakanchuk</h3>
+                    <p>QA Engineer</p>
+                </div>
+            </div>
+            <div class="footer-part">
+                <p>My social media profiles</p>
+                <div class="footer-icons-row">
+                    <a href="https://www.instagram.com/andrejstakanchuk/"><img src="icons/Instagram_icon.png.webp" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100087377582132"><img src="icons/2021_Facebook_icon.svg .png" alt="Facebook"></a>
+                    <a href="https://github.com/AndrewStak11"><img src="icons/git.svg" alt="GitHub"></a>
+                </div>
+            </div>
+            <div class="footer-part">
+                <a href="mailto:andrejstakanchuk@gmail.com" class="footer-button">Email</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

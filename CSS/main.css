@@ -765,86 +765,72 @@ body#project-page {
 /* // Projects */
 /* Адаптация для экранов шириной до 768px */
 @media (max-width: 750px) {
-    /* Общие настройки */
-    body {
-        font-size: 14px; /* Уменьшаем размер шрифта */
-    }
-
-    /* Стрелки */
-    .arrow {
-        width: 40px;
-        height: 40px;
-        bottom: 20px;
-    }
-
     /* Карточки */
     .card-main {
-        flex-direction: column; /* Располагаем карточку вертикально */
-        width: 100%; /* Занимают всю ширину экрана */
-        height: auto; /* Автоматическая высота */
+        flex-direction: column !important; /* Располагаем карточку вертикально */
+        width: 100% !important; /* Занимают всю ширину экрана */
+        height: auto !important; /* Автоматическая высота */
     }
 
     .card-img {
-        width: 100%; /* Изображение растягивается на всю ширину */
-        height: 300px; /* Уменьшаем высоту */
+        width: 100% !important; /* Изображение растягивается на всю ширину */
+        height: 200px !important; /* Уменьшаем высоту */
     }
 
     .card-content {
-        padding: 15px;
-        text-align: center; /* Центрируем текст */
+        padding: 15px !important;
+        text-align: center !important; /* Центрируем текст */
+    }
+
+    .card-title {
+        font-size: 18px !important; /* Уменьшаем заголовок карточки */
+        margin-bottom: 10px !important;
+    }
+
+    .card-description {
+        font-size: 14px !important;
+        margin-bottom: 20px !important; /* Добавляем больше отступа перед кнопкой */
     }
 
     /* Кнопки */
     .card-button {
-        padding: 10px 20px;
-        font-size: 14px; /* Уменьшаем размер текста */
-    }
-
-    /* Контейнер для кнопок */
-    .button-container {
-        flex-direction: column; /* Располагаем кнопки вертикально */
-        gap: 10px; /* Отступы между кнопками */
+        padding: 10px 20px !important;
+        font-size: 14px !important; /* Уменьшаем размер текста */
+        margin-top: 10px !important; /* Добавляем отступ сверху для кнопки */
     }
 }
 
-/* Адаптация для экранов шириной до 480px */
 @media (max-width: 480px) {
-    .header-title {
-        font-size: 32px; /* Уменьшаем размер заголовка */
-    }
-
-    .header-subtitle {
-        font-size: 14px; /* Уменьшаем размер подзаголовка */
-    }
-
-    .arrow {
-        width: 30px;
-        height: 30px;
-        bottom: 10px;
-    }
-
     /* Карточки */
     .card-main {
-        width: 100%; /* Занимают всю ширину */
-        flex-direction: column;
+        width: 100% !important; /* Занимают всю ширину */
+        flex-direction: column !important;
     }
 
     .card-img {
-        height: 150px; /* Уменьшаем высоту изображения */
+        height: 150px !important; /* Уменьшаем высоту изображения */
     }
 
     .card-content {
-        padding: 10px;
+        padding: 10px !important;
     }
 
     .portfolio-header {
-        font-size: 1.5rem; /* Уменьшаем заголовок портфолио */
+        font-size: 1.5rem !important; /* Уменьшаем заголовок портфолио */
     }
 
     /* Кнопки */
     .card-button {
-        padding: 8px 16px;
-        font-size: 12px;
+        padding: 8px 16px !important;
+        font-size: 12px !important;
+        margin: 10px auto 0 !important; /* Отступ для кнопки */
+        display: block;
+    }
+
+    /* Увеличиваем расстояние между элементами */
+    .card-description {
+        margin-bottom: 15px !important;
     }
 }
+
 
